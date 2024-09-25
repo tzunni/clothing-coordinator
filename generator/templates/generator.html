@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
+<style>
+    * {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+</style>
 <body>
 
-<h1>Hello World!</h1>
-<p>Clothing Generator</p>
-<button type="button">Generate Outfit</button>
+<h1>Clothing Generator</h1>
+<form action="">
+    <div>
+        <fieldset style="display: inline-block">
+            <legend>Weather</legend>
+            <label for="weather" style="font-size: x-large;"></label>
+            <div><select id="weather" name="weather">
+                <option value="" hidden style="color: lightgray">N/A</option>
+                <option value="cold">Cold</option>
+                <option value="temperate">Temperate</option>
+                <option value="warm">Warm</option>
+                <option value="hot">Hot</option>
+            </select></div>
+        </fieldset>
+        <fieldset style="display: inline-block">
+            <legend>Shade</legend>
+            <label for="shade" style="font-size: x-large;"></label>
+            <div><select id="shade" name="shade">
+                <option value="" hidden style="color: lightgray">N/A</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select></div>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+<script></script>
+
 </body>
 </html>
