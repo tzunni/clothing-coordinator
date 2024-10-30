@@ -1,0 +1,95 @@
+.menu-container {
+    display: flex;
+    margin: 100px;
+}
+.weather-menu, .shade-menu {
+    width: 250px;
+    margin: 0px;
+}
+
+body {
+    background: #E3F2FD
+}
+.weather-menu {
+    width: 250px;
+    margin: 100px 100px 100px 100px;
+}
+    
+.weather-menu .weather-btn{
+    display: flex;
+    height: 15px;
+    background: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-menu .options {
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.weather-menu.active .options{
+    display: block;
+}
+
+.options .option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 6px;
+    border-radius: 8px;
+    align-items: center;
+    background: #ffffff;
+}
+
+.options .option:hover {
+    background: #F2F2F2;
+}
+
+.shade-menu {
+    width: 150px;
+    margin: 100px auto;
+}
+
+.shade-menu .shade-btn{
+    display: flex;
+    height: 15px;
+    background: #ffffff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.shade-menu .shade-options {
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.shade-options .shade-option {
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 6px;
+    border-radius: 8px;
+    align-items: center;
+    background: #ffffff;
+}
