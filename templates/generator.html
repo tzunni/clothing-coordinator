@@ -3,7 +3,7 @@
 <html>
 <head>
     <link rel= "stylesheet" href = "{% static 'css/generator.css' %}">
-    <script src= "{% static 'css/generator.js' %}"></script>
+    <script src= "{% static 'css/generator.js' %}" defer></script>
 </head>
 <body>
 {% if request.user.is_authenticated %}
