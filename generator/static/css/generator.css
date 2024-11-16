@@ -37,6 +37,7 @@ body {
 }
 
 .weather-menu .options {
+    display: none;
     position: relative;
     padding: 20px;
     margin-top: 10px;
@@ -82,6 +83,7 @@ body {
 }
 
 .shade-menu .shade-options {
+    display: none;
     position: relative;
     padding: 20px;
     margin-top: 10px;
@@ -90,6 +92,9 @@ body {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+.shade-menu.active .shade-options{
+    display: block;
+}
 .shade-options .shade-option {
     display: flex;
     height: 55px;
