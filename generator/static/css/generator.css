@@ -109,4 +109,17 @@ body {
     background: #ffffff;
 }
 
+.admin-links {
+    margin-top: 20px;
+    text-align: center;
+}
 
+.admin-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.admin-links a:hover {
+    text-decoration: underline;
+}

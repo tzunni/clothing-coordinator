@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel= "stylesheet" href = "{% static 'css/generator.css' %}">
-    <script src= "{% static 'css/generator.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/generator.css' %}">
+    <script src="{% static 'css/generator.js' %}" defer></script>
 </head>
 <body>
 {% if request.user.is_authenticated %}
@@ -13,53 +13,59 @@
   <a href="{% url 'login' %}">Login</a>
   <a href="{% url 'signup' %}">Signup</a>
 {% endif %}
-
-<h1>Clothing Generator</h1>
-<div class = "menu-container">
-    <form id="selectionForm"><div class = "menus">
-        <div class ="weather-menu"> 
-            <div class= "weather-btn">
-                <span class= "wBtn-text">Select the weather</span>
-            </div>
-        
-            <ul class= "options">
-                <li class= "option">
-                    <span class= "option-text">Cold</span>
-                </li>
-                <li class= "option">
-                    <span class= "option-text">Temperate</span>
-                </li>
-                <li class= "option">
-                    <span class= "option-text">Warm</span>
-                </li>
-                <li class= "option">
-                    <span class= "option-text">Hot</span>
-                </li>
-            </ul>
-        </div>
-    
-        <div class = "shade-menu">
-            <div class= "shade-btn">
-                <span class= "sBtn-text">Select the shade</span>
-            </div>
-    
-            <ul class = "shade-options">
-                <li class = "shade-option">
-                    <span class = "sOption-text">N/A</span>
-                </li>
-                <li class = "shade-option">
-                    <span class = "sOption-text">Light</span>
-                </li>
-                <li class = "shade-option">
-                    <span class = "sOption-text">Dark</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
+<div class="admin-links">
+    <a href="{% url 'add_item' %}">Add Item</a>
+    <a href="{% url 'remove_item' %}">Remove Item</a>
 </div>
-    <div class = "container-sbtn">
-        <button class = "submit-button">Submit</button>
-    </div></form>
+<h1>Clothing Generator</h1>
+<div class="menu-container">
+    <form id="selectionForm">
+        <div class="menus">
+            <div class="weather-menu"> 
+                <div class="weather-btn">
+                    <span class="wBtn-text">Select the weather</span>
+                </div>
+                <ul class="options">
+                    <li class="option">
+                        <span class="option-text">Any</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Cold</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Temperate</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Warm</span>
+                    </li>
+                    <li class="option">
+                        <span class="option-text">Hot</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="shade-menu">
+                <div class="shade-btn">
+                    <span class="sBtn-text">Select the shade</span>
+                </div>
+                <ul class="shade-options">
+                    <li class="shade-option">
+                        <span class="sOption-text">Any</span>
+                    </li>
+                    <li class="shade-option">
+                        <span class="sOption-text">Light</span>
+                    </li>
+                    <li class="shade-option">
+                        <span class="sOption-text">Dark</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-sbtn">
+            <button class="submit-button">Submit</button>
+        </div>
+    </form>
+    <div id="generated"></div>
+</div>
+
 </body>
 </html>

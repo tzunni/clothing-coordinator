@@ -30,12 +30,11 @@ shadeOptions.forEach(option => {
     });
 });
 
-
 document.getElementById("selectionForm").addEventListener("submit", (event) => {
     event.preventDefault();
-    const weather = wBtn_text.innerText;
-    const shade = sBtn_text.innerText;
-    const url = `/generator/${weather}/${shade}`;
+    const encodedWeather = encodeURIComponent(document.querySelector(".wBtn-text").innerText); // URL-encode the weather value
+    const encodedShade = encodeURIComponent(document.querySelector(".sBtn-text").innerText); // URL-encode the shade value
+    const url = `/generator/${encodedWeather}/${encodedShade}`;
     window
         .fetch(url)
         .then((response) => response.json())

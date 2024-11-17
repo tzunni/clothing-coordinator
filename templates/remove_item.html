@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/generator.css' %}">
+    <script>
+        function updateItemAttributes() {
+            const selectedItem = document.getElementById("id_item_id").selectedOptions[0];
+            const attributesDiv = document.getElementById("item-attributes");
+            attributesDiv.innerHTML = `
+                <p><strong>Name:</strong> ${selectedItem.getAttribute('data-name')}</p>
+                <p><strong>Weather:</strong> ${selectedItem.getAttribute('data-weather')}</p>
+                <p><strong>Shade:</strong> ${selectedItem.getAttribute('data-shade')}</p>
+            `;
+        }
+    </script>
+</head>
+<body>
+<h1>Remove Item</h1>
+<form method="POST">
+    {% csrf_token %}
+    <select name="item_id" id="id_item_id" onchange="updateItemAttributes()">
+        {% for item in form.fields.item_id.queryset %}
+            <option value="{{ item.id }}" data-name="{{ item.name }}" data-weather="{{ item.weather.name }}" data-shade="{{ item.shade.name }}">
+                {{ item.name }}
+            </option>
+        {% endfor %}
+    </select>
+    <button type="submit">Remove Item</button>
+</form>
+<div id="item-attributes"></div>
+<a href="{% url 'home' %}">Back to Home</a>
+
+<script>
+    document.getElementById("id_item_id").addEventListener("change", updateItemAttributes);
+    // Trigger the function to display attributes of the initially selected item
+    updateItemAttributes();
+</script>
+</body>
+</html>
