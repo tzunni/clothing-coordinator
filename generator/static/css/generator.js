@@ -16,7 +16,7 @@ options.forEach(option => {
 
 const shadeMenu = document.querySelector(".shade-menu"),
       ShadeSelectionBtn = shadeMenu.querySelector(".shade-btn"),
-      shadeOptions = shadeMenu.querySelectorAll(".shade-option"), // Corrected selector
+      shadeOptions = shadeMenu.querySelectorAll(".shade-option"),
       sBtn_text = shadeMenu.querySelector(".sBtn-text");
 
 ShadeSelectionBtn.addEventListener("click", () => shadeMenu.classList.toggle("active"));
@@ -28,4 +28,18 @@ shadeOptions.forEach(option => {
 
         shadeMenu.classList.toggle("active");
     });
+});
+
+
+document.getElementById("selectionForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const weather = wBtn_text.innerText;
+    const shade = sBtn_text.innerText;
+    const url = `/generator/${weather}/${shade}`;
+    window
+        .fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById("generated").innerHTML = data.generated;
+        });
 });
