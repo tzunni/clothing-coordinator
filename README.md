@@ -21,7 +21,8 @@ py manage.py runserver
 ## Setup:
 1. **Open the Django Shell and Import Models:**
    ```sh
-   python manage.py shell
+   py manage.py migrate generator 0001
+   py manage.py shell
    ```
 
 2. **Import our shade and weather states into the database:**
