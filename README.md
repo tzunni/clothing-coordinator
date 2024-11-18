@@ -35,5 +35,5 @@ py manage.py runserver
        Weather.objects.create(name=weather)
 
    for shade in shade_data:
-       shade.objects.create(name=shade)
+       Shade.objects.create(name=shade)
    ```
