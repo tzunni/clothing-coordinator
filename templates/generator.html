@@ -17,11 +17,11 @@
     <a href="{% url 'add_item' %}">Add Item</a>
     <a href="{% url 'remove_item' %}">Remove Item</a>
 </div>
-<h1>Clothing Generator</h1>
+<h1 id="header">Clothing Generator</h1>
 <div class="menu-container">
     <form id="selectionForm">
         <div class="menus">
-            <div class="weather-menu"> 
+            <div class="weather-menu">
                 <div class="weather-btn">
                     <span class="wBtn-text">Select the weather</span>
                 </div>
@@ -56,6 +56,22 @@
                     </li>
                     <li class="shade-option">
                         <span class="sOption-text">Dark</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="accessory-menu">
+                <div class="accessory-btn">
+                    <span class="aBtn-text">Include Accessory</span>
+                </div>
+                <ul class="accessory-options">
+                    <li class="accessory-option">
+                        <span class="aOption-text">Either</span>
+                    </li>
+                    <li class="accessory-option">
+                        <span class="aOption-text">Yes</span>
+                    </li>
+                    <li class="accessory-option">
+                        <span class="aOption-text">No</span>
                     </li>
                 </ul>
             </div>

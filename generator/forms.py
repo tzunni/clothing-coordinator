@@ -18,10 +18,11 @@ class ItemChoiceField(forms.ModelChoiceField):
 class ItemForm(forms.ModelForm):
     weather = forms.ModelChoiceField(queryset=Weather.objects.all(), label="Select Weather")
     shade = forms.ModelChoiceField(queryset=Shade.objects.all(), label="Select Shade")
+    type = forms.ChoiceField(choices=Item.TYPE_CHOICES, label="Select Type")
 
     class Meta:
         model = Item
-        fields = ['name', 'weather', 'shade']
+        fields = ['name', 'type', 'weather', 'shade']
 
 class RemoveItemForm(forms.Form):
     item_id = forms.ModelChoiceField(
