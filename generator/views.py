@@ -40,7 +40,6 @@ def get_item(request, weather_name, shade_name, accessory_option):
             accessory = get_random_item('Accessory')
         elif accessory_option == 'Either':
             accessory = get_random_item('Accessory') if random.choice([True, False]) else None
-
         if top and bottom and (accessory or accessory_option in ['No', 'Either']):
             generated = f'Top: {top.name}, Bottom: {bottom.name}'
             if accessory:

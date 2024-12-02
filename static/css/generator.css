@@ -1,111 +1,124 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 #header {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .admin-links {
-    font-size: large;
-    margin: 20px;
-    text-align: center;
+  font-size: large;
+  margin: 20px;
+  text-align: center;
 }
 
 .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; /* Add relative positioning to the container */
-    gap: 20px; /* Adjust the space between the elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Add relative positioning to the container */
+  gap: 20px;
+  /* Adjust the space between the elements */
 }
 
 .menus {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    position: relative; /* Add relative positioning to the menus */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  /* Add relative positioning to the menus */
 }
 
-.weather-menu, .shade-menu, .accessory-menu {
-    position: relative; /* Ensure the menus are positioned relative to their container */
-    width: 250px; /* Ensure all menus have the same width */
-    margin: 0px;
+.weather-menu,
+.shade-menu,
+.accessory-menu {
+  position: relative;
+  /* Ensure the menus are positioned relative to their container */
+  width: 250px;
+  /* Ensure all menus have the same width */
+  margin: 0px;
 }
 
-.weather-menu .options, .shade-menu .shade-options, .accessory-menu .accessory-options {
-    position: absolute; /* Position the options absolutely */
-    top: 100%; /* Position the options below the button */
-    left: 0;
-    width: 100%;
-    z-index: 1; /* Ensure the options are on top of other elements */
-    display: none; /* Hide options by default */
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+.weather-menu .options,
+.shade-menu .shade-options,
+.accessory-menu .accessory-options {
+  position: absolute;
+  /* Position the options absolutely */
+  top: 100%;
+  /* Position the options below the button */
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  /* Ensure the options are on top of other elements */
+  display: none;
+  /* Hide options by default */
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
-.weather-menu .weather-btn, .shade-menu .shade-btn, .accessory-menu .accessory-btn {
-    display: flex;
-    height: 15px;
-    background: #ffffff;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 8px;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.weather-menu .weather-btn,
+.shade-menu .shade-btn,
+.accessory-menu .accessory-btn {
+  display: flex;
+  height: 15px;
+  background: #ffffff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.weather-menu .options .option, .shade-menu .shade-options .shade-option, .accessory-menu .accessory-options .accessory-option {
-    display: flex;
-    height: 55px;
-    cursor: pointer;
-    padding: 0 6px;
-    border-radius: 8px;
-    align-items: center;
-    background: #ffffff;
+.weather-menu .options .option,
+.shade-menu .shade-options .shade-option,
+.accessory-menu .accessory-options .accessory-option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 6px;
+  border-radius: 8px;
+  align-items: center;
+  background: #ffffff;
 }
 
-.weather-menu .options .option:hover, .shade-menu .shade-options .shade-option:hover, .accessory-menu .accessory-options .accessory-option:hover {
-    background: #F2F2F2;
+.weather-menu .options .option:hover,
+.shade-menu .shade-options .shade-option:hover,
+.accessory-menu .accessory-options .accessory-option:hover {
+  background: #F2F2F2;
 }
 
-.weather-menu.active .options, .shade-menu.active .shade-options, .accessory-menu.active .accessory-options {
-    display: block;
+.weather-menu.active .options,
+.shade-menu.active .shade-options,
+.accessory-menu.active .accessory-options {
+  display: block;
 }
 
 .container-sbtn {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .submit-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 #generated {
-    text-align: center;
-    margin-top: 20px;
-}
-
-body {
-    background: #E3F2FD;
+  text-align: center;
+  margin-top: 20px;
 }

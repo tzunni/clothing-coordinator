@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="{% static 'css/generator.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/remove_item.css' %}">
     <script>
         function updateItemAttributes() {
             const selectedItem = document.getElementById("id_item_id").selectedOptions[0];
@@ -16,8 +17,9 @@
     </script>
 </head>
 <body>
-<h1>Remove Item</h1>
-<form method="POST">
+<h1 class="header">Remove Item</h1>
+<div class="form">
+  <form method="POST">
     {% csrf_token %}
     <select name="item_id" id="id_item_id" onchange="updateItemAttributes()">
         {% for item in form.fields.item_id.queryset %}
@@ -28,6 +30,7 @@
     </select>
     <button type="submit">Remove Item</button>
 </form>
+</div>
 <div id="item-attributes"></div>
 <a href="{% url 'home' %}">Back to Home</a>
 
