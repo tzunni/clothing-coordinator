@@ -3,7 +3,6 @@
 - Keith Bui
 - Matthew Dzoan
 - Jeffrey Wong
-- Jacob Sean Evasco
 - Wonjun Kim
 
 ## Language:
@@ -21,7 +20,7 @@ py manage.py runserver
 ## Setup:
 1. **Open the Django Shell and Import Models:**
    ```sh
-   py manage.py migrate generator 0001
+   py manage.py migrate generator 0002
    py manage.py shell
    ```
 
